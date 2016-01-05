@@ -17,7 +17,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIUserNotificationType types  = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *mysettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [application registerUserNotificationSettings:mysettings];
+    [application registerForRemoteNotifications];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    NSString *stringDeviceToken = [[[[deviceToken description]
+                                     stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                                    stringByReplacingOccurrencesOfString:@">" withString:@""]
+                                   stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"Device token: %@", stringDeviceToken);
+}
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"Failed to get token, error: %@", error);
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    NSLog(@"User info: %@", userInfo);
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+        NSLog(@"Received notification active");
+    } else if (state == UIApplicationStateInactive){
+        NSLog(@"Received notification INActive");
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
