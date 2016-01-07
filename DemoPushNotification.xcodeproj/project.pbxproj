@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC831C3BB8EB00C92B98 /* main.m */; };
 		DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */; };
-		DEB2BC8A1C3BB8EB00C92B98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC891C3BB8EB00C92B98 /* ViewController.m */; };
+		DEB2BC8A1C3BB8EB00C92B98 /* First.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC891C3BB8EB00C92B98 /* First.m */; };
 		DEB2BC8D1C3BB8EB00C92B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC8B1C3BB8EB00C92B98 /* Main.storyboard */; };
 		DEB2BC8F1C3BB8EB00C92B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */; };
 		DEB2BC921C3BB8EB00C92B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC901C3BB8EB00C92B98 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DEB2BC7F1C3BB8EB00C92B98 /* DemoPushNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoPushNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB2BC7F1C3BB8EB00C92B98 /* PD Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PD Push.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB2BC831C3BB8EB00C92B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEB2BC851C3BB8EB00C92B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DEB2BC881C3BB8EB00C92B98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DEB2BC891C3BB8EB00C92B98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DEB2BC881C3BB8EB00C92B98 /* First.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = First.h; path = ../First.h; sourceTree = "<group>"; };
+		DEB2BC891C3BB8EB00C92B98 /* First.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = First.m; path = ../First.m; sourceTree = "<group>"; };
 		DEB2BC8C1C3BB8EB00C92B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		DEB2BC911C3BB8EB00C92B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB2BC931C3BB8EB00C92B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +39,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE49F6011C3E0D0900CC9722 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DE49F6021C3E0D0900CC9722 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DE49F6031C3E0D0900CC9722 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2BC881C3BB8EB00C92B98 /* First.h */,
+				DEB2BC891C3BB8EB00C92B98 /* First.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE49F6041C3E0D0900CC9722 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DE49F6051C3E0D0900CC9722 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DE49F6061C3E0D0900CC9722 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE49F6071C3E0D0900CC9722 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE49F6081C3E0D0900CC9722 /* ThirdPartyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPartyLibrary;
+			sourceTree = "<group>";
+		};
+		DE49F6091C3E0D0900CC9722 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE49F60A1C3E0D9600CC9722 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2BC851C3BB8EB00C92B98 /* AppDelegate.h */,
+				DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DE49F60B1C3E0E0A00CC9722 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2BC8B1C3BB8EB00C92B98 /* Main.storyboard */,
+				DEB2BC901C3BB8EB00C92B98 /* LaunchScreen.storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		DEB2BC761C3BB8EB00C92B98 = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +134,7 @@
 		DEB2BC801C3BB8EB00C92B98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEB2BC7F1C3BB8EB00C92B98 /* DemoPushNotification.app */,
+				DEB2BC7F1C3BB8EB00C92B98 /* PD Push.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,14 +142,17 @@
 		DEB2BC811C3BB8EB00C92B98 /* DemoPushNotification */ = {
 			isa = PBXGroup;
 			children = (
-				DEB2BC851C3BB8EB00C92B98 /* AppDelegate.h */,
-				DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */,
-				DEB2BC881C3BB8EB00C92B98 /* ViewController.h */,
-				DEB2BC891C3BB8EB00C92B98 /* ViewController.m */,
-				DEB2BC8B1C3BB8EB00C92B98 /* Main.storyboard */,
-				DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */,
-				DEB2BC901C3BB8EB00C92B98 /* LaunchScreen.storyboard */,
-				DEB2BC931C3BB8EB00C92B98 /* Info.plist */,
+				DE49F6011C3E0D0900CC9722 /* API */,
+				DE49F6021C3E0D0900CC9722 /* Common */,
+				DE49F6031C3E0D0900CC9722 /* Controller */,
+				DE49F6041C3E0D0900CC9722 /* CustomView */,
+				DE49F6051C3E0D0900CC9722 /* Helpers */,
+				DE49F6061C3E0D0900CC9722 /* Model */,
+				DE49F6071C3E0D0900CC9722 /* Resources */,
+				DE49F6081C3E0D0900CC9722 /* ThirdPartyLibrary */,
+				DE49F6091C3E0D0900CC9722 /* Views */,
+				DE49F60A1C3E0D9600CC9722 /* AppDelegate */,
+				DE49F60B1C3E0E0A00CC9722 /* Layout */,
 				DEB2BC821C3BB8EB00C92B98 /* Supporting Files */,
 			);
 			path = DemoPushNotification;
@@ -74,6 +161,7 @@
 		DEB2BC821C3BB8EB00C92B98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DEB2BC931C3BB8EB00C92B98 /* Info.plist */,
 				DEB2BC831C3BB8EB00C92B98 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -96,7 +184,7 @@
 			);
 			name = DemoPushNotification;
 			productName = DemoPushNotification;
-			productReference = DEB2BC7F1C3BB8EB00C92B98 /* DemoPushNotification.app */;
+			productReference = DEB2BC7F1C3BB8EB00C92B98 /* PD Push.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB2BC8A1C3BB8EB00C92B98 /* ViewController.m in Sources */,
+				DEB2BC8A1C3BB8EB00C92B98 /* First.m in Sources */,
 				DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */,
 				DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */,
 			);
@@ -194,7 +282,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -216,6 +305,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -237,7 +327,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -252,6 +343,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -261,10 +353,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DemoPushNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuocdai.DemoPushNotification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PD Push";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -272,10 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DemoPushNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuocdai.DemoPushNotification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PD Push";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -298,6 +396,7 @@
 				DEB2BC981C3BB8EB00C92B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

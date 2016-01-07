@@ -6,17 +6,25 @@
 //  Copyright © 2016 phuocdai. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "First.h"
 
-@interface ViewController ()
+@interface First (){
+    NSString *s;
+    NSInteger b;
+}
 
 @end
 
-@implementation ViewController
+@implementation First
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"File :%s\n", __FILE__ );
+    NSLog(@"Date :%s\n", __DATE__ );
+    NSLog(@"Time :%s\n", __TIME__ );
+    NSLog(@"Line :%d\n", __LINE__ );
+    NSLog(@"ANSI :%d\n", __STDC__ );
 }
 
 - (void)didReceiveMemoryWarning {
