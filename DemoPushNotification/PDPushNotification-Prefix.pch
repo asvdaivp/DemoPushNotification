@@ -1,0 +1,23 @@
+
+//
+//  PDPushNotification-Prefix.pch
+//  DemoPushNotification
+//
+//  Created by phuocdai on 1/7/16.
+//  Copyright © 2016 phuocdai. All rights reserved.
+//
+
+#ifndef PDPushNotification_Prefix_pch
+#define PDPushNotification_Prefix_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#endif

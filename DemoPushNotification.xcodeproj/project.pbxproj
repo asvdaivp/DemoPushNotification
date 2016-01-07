@@ -14,6 +14,8 @@
 		DE49F6151C3E12A800CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6141C3E12A800CC9722 /* readMe.txt */; settings = {ASSET_TAGS = (); }; };
 		DE49F6171C3E12DB00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6161C3E12DB00CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
 		DE49F6191C3E131C00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6181C3E131C00CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
+		DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */; settings = {ASSET_TAGS = (); }; };
+		DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61F1C3E1ACB00CC9722 /* PDError.m */; settings = {ASSET_TAGS = (); }; };
 		DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC831C3BB8EB00C92B98 /* main.m */; };
 		DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */; };
 		DEB2BC8A1C3BB8EB00C92B98 /* First.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC891C3BB8EB00C92B98 /* First.m */; };
@@ -30,6 +32,11 @@
 		DE49F6141C3E12A800CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 		DE49F6161C3E12DB00CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		DE49F6181C3E131C00CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		DE49F61A1C3E179C00CC9722 /* PDPushNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDPushNotification-Prefix.pch"; sourceTree = "<group>"; };
+		DE49F61B1C3E19AA00CC9722 /* NSString+APIPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APIPaths.h"; sourceTree = "<group>"; };
+		DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APIPaths.m"; sourceTree = "<group>"; };
+		DE49F61E1C3E1ACB00CC9722 /* PDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDError.h; sourceTree = "<group>"; };
+		DE49F61F1C3E1ACB00CC9722 /* PDError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDError.m; sourceTree = "<group>"; };
 		DEB2BC7F1C3BB8EB00C92B98 /* PD Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PD Push.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB2BC831C3BB8EB00C92B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEB2BC851C3BB8EB00C92B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				DE49F60C1C3E106900CC9722 /* readMe.txt */,
+				DE49F61B1C3E19AA00CC9722 /* NSString+APIPaths.h */,
+				DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */,
+				DE49F61E1C3E1ACB00CC9722 /* PDError.h */,
+				DE49F61F1C3E1ACB00CC9722 /* PDError.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 			children = (
 				DEB2BC931C3BB8EB00C92B98 /* Info.plist */,
 				DEB2BC831C3BB8EB00C92B98 /* main.m */,
+				DE49F61A1C3E179C00CC9722 /* PDPushNotification-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,7 +271,9 @@
 			files = (
 				DEB2BC8A1C3BB8EB00C92B98 /* First.m in Sources */,
 				DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */,
+				DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */,
 				DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */,
+				DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "PDPushNotification-Prefix.pch";
 				INFOPLIST_FILE = DemoPushNotification/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -388,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "PDPushNotification-Prefix.pch";
 				INFOPLIST_FILE = DemoPushNotification/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
