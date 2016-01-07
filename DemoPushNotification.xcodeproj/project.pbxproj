@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE49F60D1C3E106900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60C1C3E106900CC9722 /* readMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F60F1C3E111900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60E1C3E111900CC9722 /* readMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F6111C3E11F100CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6101C3E11F100CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F6131C3E122A00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6121C3E122A00CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F6151C3E12A800CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6141C3E12A800CC9722 /* readMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F6171C3E12DB00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6161C3E12DB00CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F6191C3E131C00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6181C3E131C00CC9722 /* ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
-		DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */; settings = {ASSET_TAGS = (); }; };
-		DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61F1C3E1ACB00CC9722 /* PDError.m */; settings = {ASSET_TAGS = (); }; };
+		DE49F60D1C3E106900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60C1C3E106900CC9722 /* readMe.txt */; };
+		DE49F60F1C3E111900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60E1C3E111900CC9722 /* readMe.txt */; };
+		DE49F6111C3E11F100CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6101C3E11F100CC9722 /* ReadMe.txt */; };
+		DE49F6131C3E122A00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6121C3E122A00CC9722 /* ReadMe.txt */; };
+		DE49F6151C3E12A800CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6141C3E12A800CC9722 /* readMe.txt */; };
+		DE49F6171C3E12DB00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6161C3E12DB00CC9722 /* ReadMe.txt */; };
+		DE49F6191C3E131C00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6181C3E131C00CC9722 /* ReadMe.txt */; };
+		DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */; };
+		DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61F1C3E1ACB00CC9722 /* PDError.m */; };
 		DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC831C3BB8EB00C92B98 /* main.m */; };
 		DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */; };
 		DEB2BC8A1C3BB8EB00C92B98 /* First.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC891C3BB8EB00C92B98 /* First.m */; };
 		DEB2BC8D1C3BB8EB00C92B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC8B1C3BB8EB00C92B98 /* Main.storyboard */; };
 		DEB2BC8F1C3BB8EB00C92B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */; };
 		DEB2BC921C3BB8EB00C92B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC901C3BB8EB00C92B98 /* LaunchScreen.storyboard */; };
+		F3A04B75D4069C84B2429E94 /* libPods-DemoPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 085DCF86F4D15A50D64747E8 /* libPods-DemoPushNotification.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085DCF86F4D15A50D64747E8 /* libPods-DemoPushNotification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoPushNotification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		958456493EB50E78471D6C88 /* Pods-DemoPushNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPushNotification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPushNotification/Pods-DemoPushNotification.debug.xcconfig"; sourceTree = "<group>"; };
 		DE49F60C1C3E106900CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 		DE49F60E1C3E111900CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 		DE49F6101C3E11F100CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		DEB2BC911C3BB8EB00C92B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB2BC931C3BB8EB00C92B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F82F44A9EA37F05AF295B964 /* Pods-DemoPushNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPushNotification.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPushNotification/Pods-DemoPushNotification.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A04B75D4069C84B2429E94 /* libPods-DemoPushNotification.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89CF305A99729B71272446DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				085DCF86F4D15A50D64747E8 /* libPods-DemoPushNotification.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B2263612EC27AAA14F85614 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				958456493EB50E78471D6C88 /* Pods-DemoPushNotification.debug.xcconfig */,
+				F82F44A9EA37F05AF295B964 /* Pods-DemoPushNotification.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE49F6011C3E0D0900CC9722 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +175,8 @@
 			children = (
 				DEB2BC811C3BB8EB00C92B98 /* DemoPushNotification */,
 				DEB2BC801C3BB8EB00C92B98 /* Products */,
+				8B2263612EC27AAA14F85614 /* Pods */,
+				89CF305A99729B71272446DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEB2BC961C3BB8EB00C92B98 /* Build configuration list for PBXNativeTarget "DemoPushNotification" */;
 			buildPhases = (
+				53F1F2FFEE7C8B87AC6E6CBC /* Check Pods Manifest.lock */,
 				DEB2BC7B1C3BB8EB00C92B98 /* Sources */,
 				DEB2BC7C1C3BB8EB00C92B98 /* Frameworks */,
 				DEB2BC7D1C3BB8EB00C92B98 /* Resources */,
+				D053EF49B9ED2E4143E5D6E4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +289,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53F1F2FFEE7C8B87AC6E6CBC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D053EF49B9ED2E4143E5D6E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoPushNotification/Pods-DemoPushNotification-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEB2BC7B1C3BB8EB00C92B98 /* Sources */ = {
@@ -385,6 +444,7 @@
 		};
 		DEB2BC971C3BB8EB00C92B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 958456493EB50E78471D6C88 /* Pods-DemoPushNotification.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -400,6 +460,7 @@
 		};
 		DEB2BC981C3BB8EB00C92B98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82F44A9EA37F05AF295B964 /* Pods-DemoPushNotification.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
