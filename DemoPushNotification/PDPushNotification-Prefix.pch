@@ -7,9 +7,6 @@
 //  Copyright © 2016 phuocdai. All rights reserved.
 //
 
-#ifndef PDPushNotification_Prefix_pch
-#define PDPushNotification_Prefix_pch
-
 #import <Availability.h>
 
 #ifndef __IPHONE_3_0

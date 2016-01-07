@@ -11,6 +11,6 @@
 @interface NSString (APIPaths)
 
 + (NSURL *)baseURL;
-+ (NSString *)loginURL;
++ (NSString *)resetIconURL;
 
 @end

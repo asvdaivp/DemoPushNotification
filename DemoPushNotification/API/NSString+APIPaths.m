@@ -14,8 +14,8 @@
     return [NSURL URLWithString:@"http://192.168.1.107"];
 }
 
-+ (NSString *)loginURL{
-    return @"site/login";
++ (NSString *)resetIconURL{
+    return @"api/reset-badge";
 }
 
 @end
