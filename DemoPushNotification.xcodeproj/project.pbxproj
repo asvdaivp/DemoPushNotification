@@ -44,6 +44,7 @@
 		DE49F6641C3F56F300CC9722 /* NSDictionary+Verified.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F6631C3F56F300CC9722 /* NSDictionary+Verified.m */; settings = {ASSET_TAGS = (); }; };
 		DE49F6681C3F703C00CC9722 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49F6671C3F703C00CC9722 /* Foundation.framework */; };
 		DE49F66E1C3F93A000CC9722 /* PDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F66D1C3F93A000CC9722 /* PDLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DE49F6711C3FC48000CC9722 /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F6701C3FC48000CC9722 /* NSString+Verify.m */; settings = {ASSET_TAGS = (); }; };
 		DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC831C3BB8EB00C92B98 /* main.m */; };
 		DEB2BC871C3BB8EB00C92B98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB2BC861C3BB8EB00C92B98 /* AppDelegate.m */; };
 		DEB2BC8D1C3BB8EB00C92B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2BC8B1C3BB8EB00C92B98 /* Main.storyboard */; };
@@ -102,6 +103,8 @@
 		DE49F6671C3F703C00CC9722 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE49F66C1C3F93A000CC9722 /* PDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDLoginViewController.h; sourceTree = "<group>"; };
 		DE49F66D1C3F93A000CC9722 /* PDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDLoginViewController.m; sourceTree = "<group>"; };
+		DE49F66F1C3FC48000CC9722 /* NSString+Verify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Verify.h"; sourceTree = "<group>"; };
+		DE49F6701C3FC48000CC9722 /* NSString+Verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Verify.m"; sourceTree = "<group>"; };
 		DEB2BC7F1C3BB8EB00C92B98 /* PD Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PD Push.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB2BC831C3BB8EB00C92B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEB2BC851C3BB8EB00C92B98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 			children = (
 				DE49F6621C3F56F300CC9722 /* NSDictionary+Verified.h */,
 				DE49F6631C3F56F300CC9722 /* NSDictionary+Verified.m */,
+				DE49F66F1C3FC48000CC9722 /* NSString+Verify.h */,
+				DE49F6701C3FC48000CC9722 /* NSString+Verify.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				DE49F6291C3E3C0C00CC9722 /* PDHTTPClient.m in Sources */,
 				DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */,
 				DEB2BC841C3BB8EB00C92B98 /* main.m in Sources */,
+				DE49F6711C3FC48000CC9722 /* NSString+Verify.m in Sources */,
 				DE49F6601C3F552900CC9722 /* PDUser.m in Sources */,
 				DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import "PDUserDefault.h"
+#import "PDParamsDefine.h"
 
 @implementation PDUserDefault
 
@@ -32,13 +33,13 @@
 }
 
 + (NSString *)getUserName{
-    NSString *username = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:@"username"]];
+    NSString *username = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:PARAM_USERNAME]];
     return username;
 }
 
 + (void)saveCurrentUserName:(NSString *)currentUsername{
     NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:currentUsername];
-    [self saveObject:encodedObject forKey:@"username"];
+    [self saveObject:encodedObject forKey:PARAM_USERNAME];
 }
 
 + (void)saveUserInformation:(PDUser *)user{
@@ -52,13 +53,13 @@
 }
 
 + (NSString *)getToken{
-    NSString *token = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:@"token"]];
+    NSString *token = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:PARAM_TOKEN]];
     return token;
 }
 
 + (void)saveCurrentToken:(NSString *)currentToken{
     NSData *encodedToken = [NSKeyedArchiver archivedDataWithRootObject:currentToken];
-    [self saveObject:encodedToken forKey:@"token"];
+    [self saveObject:encodedToken forKey:PARAM_TOKEN];
 }
 
 + (void)resetUserDefaults{
