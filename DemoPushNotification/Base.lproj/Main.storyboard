@@ -5,10 +5,53 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--LoginViewContoller-->
+        <scene sceneID="8FG-mI-OOP">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewControllerID" id="eur-gY-XGl" userLabel="LoginViewContoller" customClass="PDLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CMd-Ig-1kb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CYE-gJ-0bP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o1c-Dp-KXr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uO8-CC-6KO">
+                                <rect key="frame" x="20" y="203" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8Q-kE-2x0">
+                                <rect key="frame" x="20" y="241" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-Fs-aIZ">
+                                <rect key="frame" x="126" y="355" width="123" height="53"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="didTouchOnLoginButton:" destination="eur-gY-XGl" eventType="touchUpInside" id="kAd-vv-vJl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblPhoneNumber" destination="s8Q-kE-2x0" id="JLS-yz-5Uf"/>
+                        <outlet property="lblUsername" destination="uO8-CC-6KO" id="cEX-uF-zuy"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="login_identifier" id="O7x-rD-v8u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9t8-N2-dFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.5" y="330.5"/>
+        </scene>
+        <!--Top View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="First" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PDTopViewControllerID" id="BYZ-38-t0r" customClass="PDTopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,14 +67,24 @@
                                     <action selector="didTouchOnResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUO-6Z-5yA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prb-Dg-wOX">
+                                <rect key="frame" x="114" y="257" width="146" height="60"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didTouchOnLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PX-Qk-eAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="eur-gY-XGl" kind="show" identifier="logout_identifier" id="iPo-1D-1AO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307.5" y="429.5"/>
+            <point key="canvasLocation" x="710.5" y="330.5"/>
         </scene>
     </scenes>
 </document>

@@ -6,16 +6,19 @@
 //  Copyright © 2016 phuocdai. All rights reserved.
 //
 
-#import "First.h"
+#import "PDTopViewController.h"
 #import "PDError.h"
+#import "PDUser.h"
+#import "PDUserDefault.h"
+#import "PDParamsDefine.h"
 
-@interface First (){
+@interface PDTopViewController (){
     PDHTTPClient *httpClient;
 }
 
 @end
 
-@implementation First
+@implementation PDTopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,9 +30,16 @@
     httpClient.delegate = self;
 }
 
+#pragma mark - Handle event
+
 - (IBAction)didTouchOnResetButton:(id)sender {
     NSDictionary *params = @{@"secret_token": @""};
     [httpClient apiResetIconWithParams:params];
+}
+- (IBAction)didTouchOnLogoutButton:(id)sender {
+//    [PDUserDefault saveObject:@"" forKey:@""];
+    [PDUserDefault saveCurrentToken:@""];
+    [self performSegueWithIdentifier:@"logout_identifier" sender:nil];
 }
 
 #pragma mark - HTTPClient apiResetIcon

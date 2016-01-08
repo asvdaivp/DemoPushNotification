@@ -10,3 +10,4 @@
 
 #define PARAM_USERNAME      @"username"
 #define PARAM_PHONENUMBER   @"phoneNumber"
+#define PARAM_TOKEN         @"token"

@@ -20,5 +20,8 @@
 + (void)saveUserInformation:(PDUser *)user;
 + (PDUser *)getUserInformation;
 
++ (void)saveCurrentToken:(NSString *)currentToken;
++ (NSString *)getToken;
+
 + (void)resetUserDefaults;
 @end

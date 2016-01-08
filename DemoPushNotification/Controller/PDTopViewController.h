@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PDHTTPClient.h"
 
-@interface First : UIViewController <PDHTTPClientDelegate>
+@interface PDTopViewController : UIViewController <PDHTTPClientDelegate>
 
 
 @end

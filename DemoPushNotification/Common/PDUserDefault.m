@@ -51,6 +51,16 @@
     return object;
 }
 
++ (NSString *)getToken{
+    NSString *token = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:@"token"]];
+    return token;
+}
+
++ (void)saveCurrentToken:(NSString *)currentToken{
+    NSData *encodedToken = [NSKeyedArchiver archivedDataWithRootObject:currentToken];
+    [self saveObject:encodedToken forKey:@"token"];
+}
+
 + (void)resetUserDefaults{
     NSUserDefaults *userDefs = [NSUserDefaults standardUserDefaults];
     NSDictionary *dict = [userDefs dictionaryRepresentation];
