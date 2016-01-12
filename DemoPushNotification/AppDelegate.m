@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "PDUser.h"
 #import "PDUserDefault.h"
-#import "PDLoginViewController.h"
+#import "PDLogin.h"
 
 @interface AppDelegate ()
 
@@ -60,8 +60,10 @@
 }
 
 - (void)showLoginViewController{
-    PDLoginViewController *rootView = (PDLoginViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewControllerID"];
+    PDLogin *rootView = (PDLogin *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewControllerID"];
     [self.window makeKeyAndVisible];
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
     [self.window.rootViewController presentViewController:rootView animated:YES completion:nil];
+    
 }
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PDLoginViewController : UIViewController
+@interface PDLogin : UIViewController
 
 @end

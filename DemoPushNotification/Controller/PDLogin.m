@@ -6,26 +6,34 @@
 //  Copyright © 2016 phuocdai. All rights reserved.
 //
 
-#import "PDLoginViewController.h"
+#import "PDLogin.h"
 #import "PDUser.h"
 #import "PDUserDefault.h"
 #import "PDParamsDefine.h"
 #import "PDListUser.h"
 
-@interface PDLoginViewController(){
+@interface PDLogin(){
     
     __weak IBOutlet UITextField *lblUsername;
-    __weak IBOutlet UITextField *lblPhoneNumber;
+    __weak IBOutlet UITextField *lblPassword;
+    __weak IBOutlet UIButton *btnLogin;
 }
 @end
 
-@implementation PDLoginViewController
+@implementation PDLogin
 
 - (void)viewDidLoad{
+    [self setupUI];
     NSString *username = ((PDUser *)[PDUserDefault getUserInformation]).username;
     if (username) {
         lblUsername.text = username;
     }
+}
+
+- (void)setupUI{
+    btnLogin.layer.borderWidth = 1.0f;
+    btnLogin.layer.cornerRadius = 5.0f;
+    btnLogin.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 - (IBAction)didTouchOnLoginButton:(id)sender {

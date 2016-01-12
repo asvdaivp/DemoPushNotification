@@ -14,6 +14,13 @@
 
 @interface PDUserDetail (){
     PDHTTPClient *httpClient;
+    
+    __weak IBOutlet UIImageView *imageUser;
+    __weak IBOutlet UILabel *lblUsername;
+    __weak IBOutlet UILabel *lblFullName;
+    __weak IBOutlet UILabel *lblEmail;
+    __weak IBOutlet UILabel *lblJoinDate;
+    __weak IBOutlet UIButton *btnLogout;
 }
 
 @end
@@ -23,11 +30,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initHttpClient];
+    [self setupUI];
 }
 
 - (void)initHttpClient{
     httpClient = [PDHTTPClient sharedPDHTTPClient];
     httpClient.delegate = self;
+}
+
+- (void)setupUI{
+    btnLogout.layer.borderWidth = 1.0f;
+    btnLogout.layer.cornerRadius = 5.0f;
+    btnLogout.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 #pragma mark - Handle event
