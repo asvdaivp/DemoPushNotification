@@ -6,19 +6,19 @@
 //  Copyright © 2016 phuocdai. All rights reserved.
 //
 
-#import "PDTopViewController.h"
+#import "PDUserDetail.h"
 #import "PDError.h"
 #import "PDUser.h"
 #import "PDUserDefault.h"
 #import "PDParamsDefine.h"
 
-@interface PDTopViewController (){
+@interface PDUserDetail (){
     PDHTTPClient *httpClient;
 }
 
 @end
 
-@implementation PDTopViewController
+@implementation PDUserDetail
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -33,13 +33,13 @@
 }
 
 + (NSString *)getUserName{
-    NSString *username = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:PARAM_USERNAME]];
+    NSString *username = [NSKeyedUnarchiver unarchiveObjectWithData:[self objectForKey:PARAM_USER_NAME]];
     return username;
 }
 
 + (void)saveCurrentUserName:(NSString *)currentUsername{
     NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:currentUsername];
-    [self saveObject:encodedObject forKey:PARAM_USERNAME];
+    [self saveObject:encodedObject forKey:PARAM_USER_NAME];
 }
 
 + (void)saveUserInformation:(PDUser *)user{

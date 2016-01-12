@@ -11,7 +11,6 @@
 @interface PDUser : NSObject
 
 @property (nonatomic, strong) NSString *username;
-@property (nonatomic, strong) NSString *phoneNumber;
 
 + (instancetype)createUserInfoWithData:(id)data;
 
