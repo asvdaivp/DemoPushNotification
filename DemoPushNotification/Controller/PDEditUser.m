@@ -8,7 +8,11 @@
 
 #import "PDEditUser.h"
 
-@interface PDEditUser ()
+@interface PDEditUser (){
+    
+    __weak IBOutlet UIButton *btnDiscard;
+    __weak IBOutlet UIButton *btnSave;
+}
 
 @end
 
@@ -17,21 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupUI];
+}
+
+- (void)setupUI{
+    btnDiscard.layer.borderWidth = 1.0f;
+    btnDiscard.layer.cornerRadius = 5.0f;
+    btnDiscard.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+    
+    btnSave.layer.borderWidth = 1.0f;
+    btnSave.layer.cornerRadius = 5.0f;
+    btnSave.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+}
+
+- (IBAction)didTouchOnDiscardButton:(id)sender {
+}
+
+- (IBAction)didTouchOnSaveButton:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
