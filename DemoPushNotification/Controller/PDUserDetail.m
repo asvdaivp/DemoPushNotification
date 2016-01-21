@@ -11,6 +11,7 @@
 #import "PDUser.h"
 #import "PDUserDefault.h"
 #import "PDParamsDefine.h"
+#import "PDEditUser.h"
 
 @interface PDUserDetail (){
     PDHTTPClient *httpClient;
@@ -26,6 +27,7 @@
 @end
 
 @implementation PDUserDetail
+@synthesize userObj;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,9 +44,24 @@
     btnLogout.layer.borderWidth = 1.0f;
     btnLogout.layer.cornerRadius = 5.0f;
     btnLogout.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    //Display user information
+    lblUsername.text = userObj.username;
+    lblFullName.text = userObj.fullName;
+    lblEmail.text = userObj.email;
+    lblJoinDate.text = userObj.joinDate;
 }
 
 #pragma mark - Handle event
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showEditIdentifier"]) {
+        if (userObj) {
+            PDEditUser *editUserVC = (PDEditUser *)segue.destinationViewController;
+            editUserVC.userObj = userObj;
+        }
+    }    
+}
 
 - (IBAction)didTouchOnResetButton:(id)sender {
     NSDictionary *params = @{@"secret_token": @""};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSDictionary+Verified.h"
 
 @interface PDLogin : UIViewController
 

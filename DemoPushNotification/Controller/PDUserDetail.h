@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PDHTTPClient.h"
+#import "UserObject.h"
 
 @interface PDUserDetail : UIViewController <PDHTTPClientDelegate>
 
+@property (nonatomic, strong) UserObject *userObj;
 
 @end
 

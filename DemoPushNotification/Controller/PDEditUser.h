@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserObject.h"
 
 @interface PDEditUser : UIViewController
+
+@property (nonatomic, strong) UserObject *userObj;
 
 @end

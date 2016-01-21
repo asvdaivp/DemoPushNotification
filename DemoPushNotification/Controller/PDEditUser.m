@@ -10,6 +10,12 @@
 
 @interface PDEditUser (){
     
+    __weak IBOutlet UITextField *txtUsername;
+    __weak IBOutlet UITextField *txtFullName;
+    __weak IBOutlet UITextField *txtEmail;
+    __weak IBOutlet UITextField *txtJoinDate;
+    __weak IBOutlet UITextField *txtNewPass;
+    __weak IBOutlet UITextField *txtConfirmPass;
     __weak IBOutlet UIButton *btnDiscard;
     __weak IBOutlet UIButton *btnSave;
 }
@@ -17,6 +23,7 @@
 @end
 
 @implementation PDEditUser
+@synthesize userObj;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +39,12 @@
     btnSave.layer.borderWidth = 1.0f;
     btnSave.layer.cornerRadius = 5.0f;
     btnSave.layer.borderColor = [[UIColor lightGrayColor]CGColor];
+    
+    //Display user information to edit
+    txtUsername.text = userObj.username;
+    txtFullName.text = userObj.fullName;
+    txtEmail.text = userObj.email;
+    txtJoinDate.text = userObj.joinDate;
 }
 
 - (IBAction)didTouchOnDiscardButton:(id)sender {

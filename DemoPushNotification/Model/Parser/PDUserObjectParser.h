@@ -8,6 +8,7 @@
 
 #import "PDBaseParser.h"
 
-@interface PDUserObjectParser : PDBaseParser
+@interface PDUserObjectParser : PDBaseParser{
+}
 
 @end

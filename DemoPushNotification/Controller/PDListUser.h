@@ -10,4 +10,6 @@
 
 @interface PDListUser : UITableViewController
 
+@property (nonatomic, strong) NSArray *listUser;
+
 @end

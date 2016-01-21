@@ -10,4 +10,9 @@
 
 @interface PDListUserCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImageView;
+@property (weak, nonatomic) IBOutlet UILabel *lblFullname;
+@property (weak, nonatomic) IBOutlet UILabel *lblJoinDate;
+@property (weak, nonatomic) IBOutlet UIView *contentViewCell;
+
 @end
