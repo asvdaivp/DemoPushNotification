@@ -12,6 +12,9 @@
 #import "PDParamsDefine.h"
 #import "PDListUser.h"
 #import "PDUserObjectParser.h"
+#import "PDUserDetail.h"
+
+#define PDRole @"2" // 1: Manager; 2:user
 
 @interface PDLogin(){
     
@@ -42,9 +45,9 @@
     btnLogin.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
-- (IBAction)didTouchOnLoginButton:(id)sender {
-    [self doLogin];
-}
+#pragma mark - Custom methods
+
+
 
 - (void)doLogin{
     NSString *username = lblUsername.text;
@@ -54,7 +57,12 @@
         PDUser *user = [PDUser createUserInfoWithData:dictUser];
         [PDUserDefault saveUserInformation:user];
         [PDUserDefault saveCurrentToken:token];
-        [self jumpToListUser];
+        if ([PDRole isEqualToString:@"1"]) {
+            [self jumpToListUser];
+        } else if ([PDRole isEqualToString:@"2"]){
+            [self jumpToUserDetail];
+        }
+        
     } else {
         NSLog(@"Username is null");
     }
@@ -68,8 +76,19 @@
 }
 
 -(void)jumpToUserDetail{
-    [self performSegueWithIdentifier:@"login_identifier" sender:nil];
+    PDUserDetail *userDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PDUserDetailID"];
+    UINavigationController *userDetailNAV = [[UINavigationController alloc] initWithRootViewController:userDetailVC];
+    userDetailVC.userObj = listUsers[0];
+    [self presentViewController:userDetailNAV animated:YES completion:nil];
 }
+
+#pragma mark - UI Event
+
+- (IBAction)didTouchOnLoginButton:(id)sender{
+    [self doLogin];
+}
+
+#pragma mark - Dummy data
 
 -(NSString *)readDummyDataFromFile{
     NSString * filePath =[[NSBundle mainBundle] pathForResource:@"DummyData" ofType:@"json"];
