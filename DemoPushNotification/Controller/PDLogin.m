@@ -14,7 +14,7 @@
 #import "PDUserObjectParser.h"
 #import "PDUserDetail.h"
 
-#define PDRole @"2" // 1: Manager; 2:user
+#define PDRole @"1" // 1: Manager; 2:user
 
 @interface PDLogin(){
     

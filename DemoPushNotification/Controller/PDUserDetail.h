@@ -13,6 +13,7 @@
 @interface PDUserDetail : UIViewController <PDHTTPClientDelegate>
 
 @property (nonatomic, strong) UserObject *userObj;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPathFromList;
 
 @end
 

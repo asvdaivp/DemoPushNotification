@@ -10,13 +10,23 @@
 #import "PDListUserCell.h"
 #import "PDUserDetail.h"
 #import "UserObject.h"
+#import "PDEditUser.h"
+
+@interface PDListUser() <PDEditUserDelegate>
+
+@end
 
 @implementation PDListUser
 @synthesize listUser;
 
+- (void)viewDidLoad{
+    [self.navigationController.navigationBar.topItem setTitle:@"List Users"];
+}
+
 - (void)showUserDetailAtIndexPath:(NSIndexPath *)indexPath{
     PDUserDetail *userDetailVC = (PDUserDetail *)[self.storyboard instantiateViewControllerWithIdentifier:@"PDUserDetailID"];
     userDetailVC.userObj = listUser[indexPath.row];
+    userDetailVC.selectedIndexPathFromList = indexPath;
     [self.navigationController pushViewController:userDetailVC animated:YES];
 }
 

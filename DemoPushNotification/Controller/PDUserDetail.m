@@ -13,7 +13,7 @@
 #import "PDParamsDefine.h"
 #import "PDEditUser.h"
 
-@interface PDUserDetail (){
+@interface PDUserDetail () <PDEditUserDelegate>{
     PDHTTPClient *httpClient;
     
     __weak IBOutlet UIImageView *imageUser;
@@ -46,10 +46,14 @@
     btnLogout.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     //Display user information
-    lblUsername.text = userObj.username;
-    lblFullName.text = userObj.fullName;
-    lblEmail.text = userObj.email;
-    lblJoinDate.text = userObj.joinDate;
+    [self displayInforWith:userObj];
+}
+
+- (void)displayInforWith:(UserObject *)currentUser{
+    lblUsername.text = currentUser.username;
+    lblFullName.text = currentUser.fullName;
+    lblEmail.text = currentUser.email;
+    lblJoinDate.text = currentUser.joinDate;
 }
 
 #pragma mark - Handle event
@@ -59,6 +63,7 @@
         if (userObj) {
             PDEditUser *editUserVC = (PDEditUser *)segue.destinationViewController;
             editUserVC.userObj = userObj;
+            editUserVC.delegate = self;
         }
     }    
 }
@@ -85,6 +90,13 @@
 
 - (void)resetIconHTTPClient:(PDHTTPClient *)client didFailedReset:(NSError *)error{
     NSLog(@"Failed reset: %@", [error description]);
+}
+
+#pragma mark - PDEditUser Delegate
+
+- (void)didUpdateAUserAt:(PDEditUser *)editUserVC updateUser:(UserObject *)user atIndexPath:(NSIndexPath *)indexPath{
+    self.userObj = user;
+    [self displayInforWith:user];
 }
 
 @end

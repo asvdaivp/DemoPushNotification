@@ -8,7 +8,7 @@
 
 #import "PDEditUser.h"
 
-@interface PDEditUser (){
+@interface PDEditUser ()<UITextFieldDelegate>{
     
     __weak IBOutlet UITextField *txtUsername;
     __weak IBOutlet UITextField *txtFullName;
@@ -23,7 +23,7 @@
 @end
 
 @implementation PDEditUser
-@synthesize userObj;
+@synthesize userObj, selectedIndexPathFromList;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,17 +45,33 @@
     txtFullName.text = userObj.fullName;
     txtEmail.text = userObj.email;
     txtJoinDate.text = userObj.joinDate;
+    
+    //
+    txtUsername.delegate = self;
 }
 
 - (IBAction)didTouchOnDiscardButton:(id)sender {
 }
 
 - (IBAction)didTouchOnSaveButton:(id)sender {
+    userObj.username = txtUsername.text;
+    userObj.fullName = txtFullName.text;
+    userObj.email = txtEmail.text;
+    userObj.joinDate = txtJoinDate.text;    
+    [self.delegate didUpdateAUserAt:self updateUser:userObj atIndexPath:selectedIndexPathFromList];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [txtUsername resignFirstResponder];
+    return YES;
 }
 
 @end
