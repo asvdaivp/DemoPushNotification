@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "70220C578F1B79094702914D"
+               BlueprintIdentifier = "95CE79266FDDD1745C3ACE20"
                BuildableName = "libPods-DemoPushNotification.a"
                BlueprintName = "Pods-DemoPushNotification"
                ReferencedContainer = "container:Pods.xcodeproj">

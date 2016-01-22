@@ -10,6 +10,7 @@
 
 @interface PDListUser : UITableViewController
 
-@property (nonatomic, strong) NSArray *listUser;
+@property (nonatomic, strong) NSMutableArray *listUser;
+@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
 @end

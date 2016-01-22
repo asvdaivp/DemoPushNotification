@@ -11,8 +11,13 @@
 #import "PDUserDetail.h"
 #import "UserObject.h"
 #import "PDEditUser.h"
+#import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 
-@interface PDListUser() <PDEditUserDelegate>
+@interface PDListUser() <PDEditUserDelegate>{
+}
+
+@property (nonatomic, weak) NSMutableArray *datasource;
 
 @end
 
@@ -21,6 +26,34 @@
 
 - (void)viewDidLoad{
     [self.navigationController.navigationBar.topItem setTitle:@"List Users"];
+    __weak PDListUser *weakSelf = self;
+
+    weakSelf.datasource = listUser;
+    [weakSelf.mainTableView addPullToRefreshWithActionHandler:^{
+        NSLog(@"===");
+    }];
+    
+    [weakSelf.mainTableView addInfiniteScrollingWithActionHandler:^{
+        [weakSelf insertRowAtBottom];
+    }];
+}
+
+#pragma mark - Custom Method
+
+- (void)insertRowAtBottom{
+    __weak PDListUser *weakSelf = self;
+    int64_t delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^{
+        [weakSelf.mainTableView beginUpdates];
+        UserObject *aObject = [[UserObject alloc]init];
+        aObject.fullName = @"daivp";
+        aObject.joinDate = @"sdfds";
+        [weakSelf.datasource addObject:aObject];
+        [weakSelf.mainTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:weakSelf.datasource.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];
+        [weakSelf.mainTableView endUpdates];
+        [weakSelf.mainTableView.infiniteScrollingView stopAnimating];
+    });
 }
 
 - (void)showUserDetailAtIndexPath:(NSIndexPath *)indexPath{

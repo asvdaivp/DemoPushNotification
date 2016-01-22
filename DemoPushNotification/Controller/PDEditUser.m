@@ -92,6 +92,7 @@
 #pragma mark - UI Event
 
 - (IBAction)didTouchOnDiscardButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (IBAction)didTouchOnSaveButton:(id)sender {
