@@ -649,6 +649,7 @@
                     <connections>
                         <outlet property="btnDiscard" destination="8Tv-2J-t7a" id="ogp-iX-ch5"/>
                         <outlet property="btnSave" destination="IgF-EY-NSQ" id="Rsd-xK-Qbc"/>
+                        <outlet property="scrollView" destination="Mhu-rd-aJ1" id="6eR-vB-ojv"/>
                         <outlet property="txtConfirmPass" destination="afL-XE-0HA" id="DCx-hH-qXn"/>
                         <outlet property="txtEmail" destination="t9S-Ne-oSW" id="652-DW-e4l"/>
                         <outlet property="txtFullName" destination="2yO-U7-NYv" id="XFk-9h-Iax"/>
