@@ -43,15 +43,15 @@
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     NSLog(@"Failed to get token, error: %@", error);
 }
-
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    NSLog(@"User info: %@", userInfo);
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"%@", userInfo);
     UIApplicationState state = [application applicationState];
     if (state == UIApplicationStateActive) {
-        NSLog(@"Received notification active");
-    } else if (state == UIApplicationStateInactive){
-        NSLog(@"Received notification INActive");
+        NSLog(@"received push when app is running in the foreground");
+    } else {
+        NSLog(@"received push when app is running in the background, app closed");
     }
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (BOOL)checkLogin{
