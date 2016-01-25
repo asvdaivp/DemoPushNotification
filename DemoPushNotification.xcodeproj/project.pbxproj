@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE49F60D1C3E106900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60C1C3E106900CC9722 /* readMe.txt */; };
-		DE49F60F1C3E111900CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F60E1C3E111900CC9722 /* readMe.txt */; };
-		DE49F6111C3E11F100CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6101C3E11F100CC9722 /* ReadMe.txt */; };
-		DE49F6131C3E122A00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6121C3E122A00CC9722 /* ReadMe.txt */; };
-		DE49F6151C3E12A800CC9722 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6141C3E12A800CC9722 /* readMe.txt */; };
-		DE49F6171C3E12DB00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6161C3E12DB00CC9722 /* ReadMe.txt */; };
-		DE49F6191C3E131C00CC9722 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE49F6181C3E131C00CC9722 /* ReadMe.txt */; };
 		DE49F61D1C3E19AA00CC9722 /* NSString+APIPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */; };
 		DE49F6201C3E1ACB00CC9722 /* PDError.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F61F1C3E1ACB00CC9722 /* PDError.m */; };
 		DE49F6291C3E3C0C00CC9722 /* PDHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE49F6281C3E3C0C00CC9722 /* PDHTTPClient.m */; settings = {ASSET_TAGS = (); }; };
@@ -64,13 +57,6 @@
 /* Begin PBXFileReference section */
 		085DCF86F4D15A50D64747E8 /* libPods-DemoPushNotification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoPushNotification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958456493EB50E78471D6C88 /* Pods-DemoPushNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPushNotification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPushNotification/Pods-DemoPushNotification.debug.xcconfig"; sourceTree = "<group>"; };
-		DE49F60C1C3E106900CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
-		DE49F60E1C3E111900CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
-		DE49F6101C3E11F100CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		DE49F6121C3E122A00CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		DE49F6141C3E12A800CC9722 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
-		DE49F6161C3E12DB00CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		DE49F6181C3E131C00CC9722 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		DE49F61A1C3E179C00CC9722 /* PDPushNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDPushNotification-Prefix.pch"; sourceTree = "<group>"; };
 		DE49F61B1C3E19AA00CC9722 /* NSString+APIPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APIPaths.h"; sourceTree = "<group>"; };
 		DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APIPaths.m"; sourceTree = "<group>"; };
@@ -172,7 +158,6 @@
 		DE49F6011C3E0D0900CC9722 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				DE49F60C1C3E106900CC9722 /* readMe.txt */,
 				DE49F61B1C3E19AA00CC9722 /* NSString+APIPaths.h */,
 				DE49F61C1C3E19AA00CC9722 /* NSString+APIPaths.m */,
 				DE49F61E1C3E1ACB00CC9722 /* PDError.h */,
@@ -188,7 +173,6 @@
 			children = (
 				DE8446E01C44B82A00DA6454 /* Categories */,
 				DE8446E51C44B82A00DA6454 /* Define */,
-				DE49F60E1C3E111900CC9722 /* readMe.txt */,
 				DE49F65B1C3F54AB00CC9722 /* PDUserDefault.h */,
 				DE49F65C1C3F54AB00CC9722 /* PDUserDefault.m */,
 				DE92A9EC1C50BE9D001284EC /* DummyData.json */,
@@ -214,7 +198,6 @@
 		DE49F6051C3E0D0900CC9722 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DE49F6101C3E11F100CC9722 /* ReadMe.txt */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -223,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				DE8446E91C44B88200DA6454 /* Parser */,
-				DE49F6121C3E122A00CC9722 /* ReadMe.txt */,
 				DE49F65E1C3F552900CC9722 /* PDUser.h */,
 				DE49F65F1C3F552900CC9722 /* PDUser.m */,
 				DE8446D61C44A9EA00DA6454 /* UserObject.h */,
@@ -238,7 +220,6 @@
 				DE92A9E51C508E8C001284EC /* images */,
 				DE49F62D1C3E54B400CC9722 /* icon */,
 				DEB2BC8E1C3BB8EB00C92B98 /* Assets.xcassets */,
-				DE49F6141C3E12A800CC9722 /* readMe.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -246,7 +227,6 @@
 		DE49F6081C3E0D0900CC9722 /* ThirdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				DE49F6161C3E12DB00CC9722 /* ReadMe.txt */,
 			);
 			path = ThirdPartyLibrary;
 			sourceTree = "<group>";
@@ -254,7 +234,6 @@
 		DE49F6091C3E0D0900CC9722 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DE49F6181C3E131C00CC9722 /* ReadMe.txt */,
 				DE8446D31C44A32500DA6454 /* PDListUserCell.h */,
 				DE8446D41C44A32500DA6454 /* PDListUserCell.m */,
 			);
@@ -461,30 +440,23 @@
 				DE49F6551C3E54B400CC9722 /* Icon-Small-50@2x.png in Resources */,
 				DE49F6571C3E54B400CC9722 /* Icon@2x.png in Resources */,
 				DE49F6501C3E54B400CC9722 /* Icon-Small@3x.png in Resources */,
-				DE49F60F1C3E111900CC9722 /* readMe.txt in Resources */,
 				DE49F64D1C3E54B400CC9722 /* Icon-83.5@2x.png in Resources */,
 				DEB2BC921C3BB8EB00C92B98 /* LaunchScreen.storyboard in Resources */,
 				DEB2BC8F1C3BB8EB00C92B98 /* Assets.xcassets in Resources */,
 				DE49F6521C3E54B400CC9722 /* Icon-72.png in Resources */,
-				DE49F60D1C3E106900CC9722 /* readMe.txt in Resources */,
 				DE49F6531C3E54B400CC9722 /* Icon-72@2x.png in Resources */,
-				DE49F6111C3E11F100CC9722 /* ReadMe.txt in Resources */,
 				DE92A9E71C508E8C001284EC /* defaultImage.png in Resources */,
 				DE92A9ED1C50BE9D001284EC /* DummyData.json in Resources */,
 				DE49F64F1C3E54B400CC9722 /* Icon-Small@2x.png in Resources */,
-				DE49F6131C3E122A00CC9722 /* ReadMe.txt in Resources */,
 				DE49F6561C3E54B400CC9722 /* Icon.png in Resources */,
-				DE49F6151C3E12A800CC9722 /* readMe.txt in Resources */,
 				DE49F6591C3E54B400CC9722 /* iTunesArtwork@2x.png in Resources */,
 				DE49F64E1C3E54B400CC9722 /* Icon-Small.png in Resources */,
-				DE49F6171C3E12DB00CC9722 /* ReadMe.txt in Resources */,
 				DE49F64A1C3E54B400CC9722 /* Icon-60@3x.png in Resources */,
 				DE49F6581C3E54B400CC9722 /* iTunesArtwork.png in Resources */,
 				DE49F6511C3E54B400CC9722 /* Icon-60.png in Resources */,
 				DE49F6461C3E54B400CC9722 /* Icon-40.png in Resources */,
 				DE49F64C1C3E54B400CC9722 /* Icon-76@2x.png in Resources */,
 				DE49F6471C3E54B400CC9722 /* Icon-40@2x.png in Resources */,
-				DE49F6191C3E131C00CC9722 /* ReadMe.txt in Resources */,
 				DE49F64B1C3E54B400CC9722 /* Icon-76.png in Resources */,
 				DE49F6541C3E54B400CC9722 /* Icon-Small-50.png in Resources */,
 				DE49F6491C3E54B400CC9722 /* Icon-60@2x.png in Resources */,
