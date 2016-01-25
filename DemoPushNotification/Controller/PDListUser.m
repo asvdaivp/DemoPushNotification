@@ -39,9 +39,22 @@
     [weakSelf.mainTableView addInfiniteScrollingWithActionHandler:^{
         [weakSelf insertRowAtBottom];
     }];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(removeUserAtIndexpath:)
+                                                name:@"position_user"
+                                              object:nil];
 }
 
 #pragma mark - Custom Method
+
+- (void)removeUserAtIndexpath:(NSNotification *)aNotification{
+    NSDictionary *dictInfo = aNotification.userInfo;
+    NSIndexPath *positionUser = [dictInfo valueForKey:@"indexPath"];
+    NSLog(@"Delete at %ld", (long)[positionUser row]);
+    [listUser removeObjectAtIndex:[positionUser row]];
+    [self.mainTableView reloadData];
+}
 
 - (void)insertRowAtBottom{
     __weak PDListUser *weakSelf = self;

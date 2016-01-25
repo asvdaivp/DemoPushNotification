@@ -647,7 +647,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit User" id="CuF-T6-9Jg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="zPq-3G-vXA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="zPq-3G-vXA">
+                            <connections>
+                                <action selector="didTouchOnDeleteButton:" destination="bH8-9D-wtB" id="Qzq-Gx-kgJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnDiscard" destination="8Tv-2J-t7a" id="ogp-iX-ch5"/>

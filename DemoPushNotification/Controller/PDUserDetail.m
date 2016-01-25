@@ -64,6 +64,7 @@
             PDEditUser *editUserVC = (PDEditUser *)segue.destinationViewController;
             editUserVC.userObj = userObj;
             editUserVC.delegate = self;
+            editUserVC.selectedIndexPathFromList = self.selectedIndexPathFromList;
         }
     }    
 }
@@ -97,6 +98,11 @@
 - (void)didUpdateAUserAt:(PDEditUser *)editUserVC updateUser:(UserObject *)user atIndexPath:(NSIndexPath *)indexPath{
     self.userObj = user;
     [self displayInforWith:user];
+}
+
+- (void)didDeleteAUserAt:(PDEditUser *)editUserVC atIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dict = @{@"indexPath":indexPath};
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"position_user" object:self userInfo:dict];
 }
 
 @end

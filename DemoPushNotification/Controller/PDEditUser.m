@@ -104,6 +104,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)didTouchOnDeleteButton:(id)sender {
+    [self.delegate didDeleteAUserAt:self atIndexPath:selectedIndexPathFromList];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - UITextField Delegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
