@@ -15,6 +15,7 @@
 #import "UIScrollView+SVInfiniteScrolling.h"
 
 @interface PDListUser() <PDEditUserDelegate>{
+    NSMutableArray *appendUsers;
 }
 
 @property (nonatomic, weak) NSMutableArray *datasource;
@@ -26,11 +27,13 @@
 
 - (void)viewDidLoad{
     [self.navigationController.navigationBar.topItem setTitle:@"List Users"];
+    [self.navigationController.navigationBar setTranslucent:NO];
     __weak PDListUser *weakSelf = self;
+    appendUsers = [NSMutableArray array];
 
     weakSelf.datasource = listUser;
     [weakSelf.mainTableView addPullToRefreshWithActionHandler:^{
-        NSLog(@"===");
+        [self reloadListUser];
     }];
     
     [weakSelf.mainTableView addInfiniteScrollingWithActionHandler:^{
@@ -49,11 +52,18 @@
         UserObject *aObject = [[UserObject alloc]init];
         aObject.fullName = @"daivp";
         aObject.joinDate = @"sdfds";
+        [appendUsers addObject:aObject];
         [weakSelf.datasource addObject:aObject];
         [weakSelf.mainTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:weakSelf.datasource.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];
         [weakSelf.mainTableView endUpdates];
         [weakSelf.mainTableView.infiniteScrollingView stopAnimating];
     });
+}
+
+- (void)reloadListUser{
+    [listUser removeObjectsInArray:appendUsers];
+    [self.mainTableView reloadData];
+    [self.mainTableView.pullToRefreshView stopAnimating];
 }
 
 - (void)showUserDetailAtIndexPath:(NSIndexPath *)indexPath{
