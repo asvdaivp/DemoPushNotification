@@ -13,6 +13,7 @@
 #import "PDEditUser.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+#import "SVProgressHUD.h"
 
 @interface PDListUser() <PDEditUserDelegate>{
     NSMutableArray *appendUsers;
@@ -33,6 +34,7 @@
 
     weakSelf.datasource = listUser;
     [weakSelf.mainTableView addPullToRefreshWithActionHandler:^{
+        [self showIndicator];
         [self reloadListUser];
     }];
     
@@ -47,6 +49,18 @@
 }
 
 #pragma mark - Custom Method
+
+- (void)showIndicator {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+}
+
+- (void)dismissIndicator {
+    int64_t delayInSeconds = 2;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^{
+        [SVProgressHUD dismiss];
+    });
+}
 
 - (void)removeUserAtIndexpath:(NSNotification *)aNotification{
     NSDictionary *dictInfo = aNotification.userInfo;
@@ -77,6 +91,7 @@
     [listUser removeObjectsInArray:appendUsers];
     [self.mainTableView reloadData];
     [self.mainTableView.pullToRefreshView stopAnimating];
+    [self dismissIndicator];
 }
 
 - (void)showUserDetailAtIndexPath:(NSIndexPath *)indexPath{

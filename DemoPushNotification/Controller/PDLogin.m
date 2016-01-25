@@ -71,7 +71,7 @@
 - (void)jumpToListUser{
     PDListUser *listUserVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PDListUserID"];
     UINavigationController *listUserNAV = [[UINavigationController alloc] initWithRootViewController:listUserVC];
-    listUserVC.listUser = listUsers;
+    listUserVC.listUser = [[NSMutableArray alloc] initWithArray:listUsers];// listUsers;
     [self presentViewController:listUserNAV animated:YES completion:nil];
 }
 
