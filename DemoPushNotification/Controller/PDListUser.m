@@ -64,7 +64,7 @@
         [weakSelf.mainTableView beginUpdates];
         UserObject *aObject = [[UserObject alloc]init];
         aObject.fullName = @"daivp";
-        aObject.joinDate = @"sdfds";
+        aObject.joinDate = [NSString stringWithFormat:@"%@",[NSDate date]];
         [appendUsers addObject:aObject];
         [weakSelf.datasource addObject:aObject];
         [weakSelf.mainTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:weakSelf.datasource.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationBottom];
