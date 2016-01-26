@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.datePicker = [self createDatePickerWithFrame:frame];
-        NSLocale * locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja-JP"];
+        NSLocale * locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]; //VietNam: vi_VN ; English: en_US ; Japan: js_JP
         self.datePicker.locale = locale;
         self.datePicker.calendar = [locale objectForKey:NSLocaleCalendar];
         

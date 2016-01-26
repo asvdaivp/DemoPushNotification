@@ -7,6 +7,8 @@
 //
 
 #import "PDEditUser.h"
+#import "CXAlertView.h"
+#import "NSDate+Utils.h"
 
 @interface PDEditUser ()<UITextFieldDelegate>{
     
@@ -32,6 +34,7 @@
     // Do any additional setup after loading the view.
     [self setupUI];
     [self registerForKeyboardNotifications];
+    [self showViewDateTimePickerWithUITextField:txtJoinDate];
 }
 
 - (void)setupUI{
@@ -60,6 +63,44 @@
 
 #pragma mark - Custom Method
 
+- (void)showWiewDateTimePickerWithAlertView {
+    PDDatePicker *viewDatePicker = [[PDDatePicker alloc]initDateTimePickerWithCurrentDate:nil
+                                                                               andMaxdate:nil
+                                                                               andMinDate:nil];
+    CXAlertView *alert = [[CXAlertView alloc] initWithTitle:@"Choose date time"
+                                                contentView:viewDatePicker
+                                          cancelButtonTitle:@"cancel"];
+    __weak CXAlertView *weakSelf = alert;
+    [alert addButtonWithTitle:@"OK"
+                         type:CXAlertViewButtonTypeDefault
+                      handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
+                          [weakSelf dismiss];
+                          PDDatePicker *containtViews = (PDDatePicker *)weakSelf.contentView;
+                          UIDatePicker *datePicker = containtViews.datePicker;
+                          NSDate *selectedDate = (NSDate *)datePicker.date;
+                          txtJoinDate.text = [NSDate stringFromDate:selectedDate];
+    }];
+    [alert show];
+}
+
+- (void)showViewDateTimePickerWithUITextField:(UITextField *)textField{
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    NSLocale * locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]; //VietNam: vi_VN ; English: en_US
+    datePicker.locale = locale;
+    datePicker.calendar = [locale objectForKey:NSLocaleCalendar];
+    datePicker.timeZone = [NSTimeZone localTimeZone];
+    [datePicker addTarget:self
+                   action:@selector(updateTextField:)
+         forControlEvents:UIControlEventValueChanged];
+    datePicker.backgroundColor = [UIColor whiteColor];
+    [textField setInputView:datePicker];
+}
+
+- (void)updateTextField:(id)sender {
+    UIDatePicker *picker = (UIDatePicker*)txtJoinDate.inputView;
+    txtJoinDate.text = [NSDate stringFromDate:picker.date];
+}
+
 - (void)registerForKeyboardNotifications{
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWasShown:)
@@ -74,7 +115,6 @@
 
 - (void)keyboardWasShown:(NSNotification *)aNotification{
     NSDictionary *info = [aNotification userInfo];
-    NSLog(@"%@", info);
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
