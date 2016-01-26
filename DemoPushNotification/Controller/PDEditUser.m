@@ -123,8 +123,7 @@
 }
 
 - (void)keyboardWillBeHidden:(NSNotification *)aNotification{
-    int statusAndNavHeight = 64.0;
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(statusAndNavHeight, 0.0, 0.0, 0.0);
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0, 0.0, 0.0, 0.0);
     scrollView.contentInset = contentInsets;
     scrollView.scrollIndicatorInsets = contentInsets;
 }
