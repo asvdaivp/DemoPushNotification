@@ -27,11 +27,12 @@
 @synthesize listUser;
 
 - (void)viewDidLoad{
+    self.mainTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];//remove cell empty in  UITableViewController
     [self.navigationController.navigationBar.topItem setTitle:@"List Users"];
     [self.navigationController.navigationBar setTranslucent:NO];
+    
     __weak PDListUser *weakSelf = self;
     appendUsers = [NSMutableArray array];
-
     weakSelf.datasource = listUser;
     [weakSelf.mainTableView addPullToRefreshWithActionHandler:^{
         [self showIndicator];
@@ -124,6 +125,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self showUserDetailAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [listUser removeObjectAtIndex:[indexPath row]];
+        [tableView reloadData];
+    }
 }
 
 @end
