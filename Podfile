@@ -5,5 +5,6 @@ target 'DemoPushNotification' do
 pod 'AFNetworking', '~> 2.6.0'
 pod 'SVPullToRefresh'
 pod 'SVProgressHUD'
+pod 'CXAlertView'
 end
 

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CXAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DemoPushNotification.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C650B47D5CC8537E600AAA40A303390</key>
+		<key>9BD310CAF5037DEDA133EBB3CB7298EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E01B5FC33E11557F31045BB60F50121C</key>
+		<key>D671A5D90A1F38D43AFFC68B6C5C36CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCFD7DA953084A69B503A5BFCCAB13DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
