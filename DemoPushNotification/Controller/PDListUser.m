@@ -40,7 +40,12 @@
     }];
     
     [weakSelf.mainTableView addInfiniteScrollingWithActionHandler:^{
-        [weakSelf insertRowAtBottom];
+        // if total of list < 10, don't need loadmore
+        if ([listUser count] >10) {
+            [weakSelf insertRowAtBottom];
+        } else {
+            [weakSelf.mainTableView.infiniteScrollingView stopAnimating];
+        }
     }];
     
     [[NSNotificationCenter defaultCenter]addObserver:self
